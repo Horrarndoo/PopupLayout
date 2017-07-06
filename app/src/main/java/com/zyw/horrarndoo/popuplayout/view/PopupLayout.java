@@ -201,6 +201,18 @@ public class PopupLayout extends FrameLayout {
         }
 
         /**
+         * 获取view垂直方向的拖拽范围，不能限制拖拽范围
+         * @param child
+         *          拖拽的child view
+         * @return
+         *          拖拽范围
+         */
+        @Override
+        public int getViewVerticalDragRange(View child) {
+            return super.getViewVerticalDragRange(child);
+        }
+
+        /**
          * 控制child在水平方向的移动
          * @param child
          *              控制移动的view
@@ -277,7 +289,7 @@ public class PopupLayout extends FrameLayout {
          * @param xvel          x方向移动的速度 负：向做移动 正：向右移动
          * @param yvel          y方向移动的速度
          */
-
+        @Override
         public void onViewReleased(View releasedChild, float xvel, float yvel) {
             if (contentView.getTop() - mOrginY > mDragRange) {//向下拖拽，超出拖拽限定距离
                 dismiss();
