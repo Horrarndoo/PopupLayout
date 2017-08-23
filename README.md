@@ -1,5 +1,5 @@
 # PopupLayout
-仿魅族Flyme6应用商城-“应用详情”-弹出式layout
+仿魅族Flyme6应用商城-“应用详情”-弹出式layout 使用viewDragHelper实现
 
 魅族应用商城应用详情如图：
 
